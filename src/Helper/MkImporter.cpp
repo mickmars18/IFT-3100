@@ -2,7 +2,7 @@
 
 std::vector<std::shared_ptr<Mesh>> MkImporter::loadModel(const std::string& filename) {
 
-	std::string path = "C:/Users/AlexandreLaBoissonni/Bureau/Mika/bin/data/" + filename;
+    std::string path = ofFilePath::getCurrentExeDir() + "\\data\\" + filename;
 	m_scene = m_importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
 	if (!m_scene || m_scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !m_scene->mRootNode)
 	{
