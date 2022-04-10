@@ -1,0 +1,120 @@
+# Blender MTL File: 'robotitus.blend'
+# Material Count: 9
+
+newmtl arm001
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.447273 0.447273 0.447273
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump textures\\test003_test003_001_Normal.png
+map_Kd test003_test003_001_BaseColor.png
+map_Ns textures\\test003_test003_001_Roughness.png
+
+newmtl arm002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.461818 0.461818 0.461818
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump textures\\test003_test003_002_Normal.png
+map_Kd textures\\test003_test003_002_BaseColor.png
+map_Ns textures\\test003_test003_002_Roughness.png
+refl textures\\test003_test003_002_Metallic.png
+
+newmtl body
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.214545 0.214545 0.214545
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump textures\\test003_test003_Normal.png
+map_Kd textures\\test003_test003_BaseColor.png
+refl textures\\test003_test003_Metallic.png
+
+newmtl foot001
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.290909 0.290909 0.290909
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump textures\\test003_test002_Normal.png
+map_Kd textures\\test003_test002_BaseColor.png
+map_Ns textures\\test003_test002_Roughness.png
+
+newmtl foot002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.363636 0.363636 0.363636
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump textures\\test003_test003_007_Normal.png
+map_Kd textures\\test003_test003_007_BaseColor.png
+map_Ns textures\\test003_test003_007_Roughness.png
+refl textures\\test003_test003_007_Metallic.png
+
+newmtl hand
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.516364 0.516364 0.516364
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump textures\\test003_test003_004_Normal.png
+map_Kd textures\\test003_test003_004_BaseColor.png
+map_Ns textures\\test003_test003_004_Roughness.png
+refl textures\\test003_test003_004_Metallic.png
+
+newmtl leg001
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.378182 0.378182 0.378182
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump textures\\test003_test003_005_Normal.png
+map_Kd textures\\test003_test003_005_BaseColor.png
+map_Ns textures\\test003_test003_005_Roughness.png
+
+newmtl leg002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.381818 0.381818 0.381818
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump textures\\test003_test003_006_Normal.png
+map_Kd textures\\test003_test003_006_BaseColor.png
+map_Ns textures\\test003_test003_006_Roughness.png
+refl textures\\test003_test003_006_Metallic.png
+
+newmtl ojo
+Ns 696.960040
+Ka 1.000000 1.000000 1.000000
+Kd 0.006929 0.006929 0.006929
+Ks 0.156364 0.156364 0.156364
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
