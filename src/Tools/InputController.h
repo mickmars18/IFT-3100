@@ -6,6 +6,7 @@ enum KEY {
     CTRL = 2,
     ENTER = 13,
     TAB = 9,
+    SPACE = 32,
     ZERO = 48,
     ONE = 49,
     TWO = 50,

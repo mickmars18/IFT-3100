@@ -155,8 +155,8 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-	if (InputController::isNumberKey(key) && InputController::isKeyDown(KEY::CTRL) ||
-		key == 1 && InputController::isKeyDown(KEY::CTRL)) {
+	if (InputController::isNumberKey(key) && InputController::isKeyDown(KEY::SPACE) ||
+		key == KEY::A && InputController::isKeyDown(KEY::SPACE)) {
 		InputController::keyReleased(key);
 		loadScene(key);
 		return;
@@ -322,7 +322,7 @@ std::string ofApp::getFileExtension(const std::string& filename) {
 }
 
 void ofApp::loadScene(int scene) {
-	if (scene == 1) {
+	if (scene == KEY::A) {
 		std::cout << "Loading scene #10" << std::endl;
 		clearScene();
 		loadScene10();
