@@ -50,6 +50,7 @@ public:
 	virtual void setPositionY(float y) { m_transform.getPosition().y = y; }
 	virtual void setPositionZ(float z) { m_transform.getPosition().z = z; }
 	virtual void setPosition(float x, float y, float z) { m_transform.setPosition(x, y, z); }
+	virtual void setPosition(const glm::vec3& position) { m_transform.setPosition(position); }
 	virtual void translate(float x, float y, float z) { 
 		setPosition(getPosition().x + x, getPosition().y + y, getPosition().z + z);
 	}

@@ -156,7 +156,8 @@ void ofApp::keyPressed(int key){
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
 	if (InputController::isNumberKey(key) && InputController::isKeyDown(KEY::SPACE) ||
-		key == KEY::A && InputController::isKeyDown(KEY::SPACE)) {
+		key == KEY::A && InputController::isKeyDown(KEY::SPACE) ||
+		key == KEY::B && InputController::isKeyDown(KEY::SPACE)) {
 		InputController::keyReleased(key);
 		loadScene(key);
 		return;
@@ -326,6 +327,12 @@ void ofApp::loadScene(int scene) {
 		std::cout << "Loading scene #10" << std::endl;
 		clearScene();
 		loadScene10();
+		return;
+	}
+	if (scene == KEY::B) {
+		std::cout << "Loading scene #11" << std::endl;
+		clearScene();
+		loadScene11();
 		return;
 	}
 	if (scene < 48 || scene > 57)
@@ -785,6 +792,18 @@ void ofApp::loadScene10() {
 	BezierCurve* bezierCurve = new BezierCurve(m_window);
 	addObjectToScene(bezierCurve);
 	m_bezierCurve = bezierCurve;
+}
+
+void ofApp::loadScene11() {
+	m_showGrid = false;
+
+	BezierSurface* bezierSurface = new BezierSurface();
+	addObjectToScene(bezierSurface);
+
+	std::vector<ControlPoint*> points = bezierSurface->setup(5, 25);
+	for (int i = 0; i < points.size(); i++) {
+		addObjectToScene(points[i]);
+	}
 }
 
 Texture* ofApp::loadTexture(const std::string& filename, bool HDR) {

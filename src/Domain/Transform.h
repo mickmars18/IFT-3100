@@ -22,6 +22,7 @@ public:
 	void setOrigin(const glm::vec3& origin);
 
 	inline void setPosition(float x, float y, float z) { m_position = glm::vec3(x, y, z); }
+	inline void setPosition(const glm::vec3& position) { m_position = position; }
 	inline void setScale(float x, float y, float z) { m_scale = glm::vec3(x, y, z); }
 
 	void setRotationX(float angle);

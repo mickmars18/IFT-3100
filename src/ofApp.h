@@ -31,6 +31,7 @@
 #include "Image/NoiseTexture.h"
 #include "PBR/PBR_Model.h"
 #include "Topology/BezierCurve.h"
+#include "Topology/BezierSurface.h"
 
 class ofApp : public ofBaseApp{
 
@@ -106,6 +107,7 @@ private:
 	void loadScene8();
 	void loadScene9();
 	void loadScene10();
+	void loadScene11();
 
 	std::vector<Texture*> m_textures;
 	bool m_showGrid = true;
