@@ -642,8 +642,9 @@ void ofApp::loadScene5() {
 
 void ofApp::loadScene6() {
 	m_showGrid = false;
-	m_camera->enableOrtho();
 	m_camera->setPosition(m_camera->getPosition() - glm::vec3(0.0f, 200.0f, 0.0f));
+	m_camera->enableOrtho();
+	m_camera->moveBackward(1000.0f);
 
 	Texture* brick = loadTexture("textures/Brick_Mortar_vmdkahflw_2K_surface_ms/vmdkahflw_2K_Albedo.jpg");
 	Texture* brickNormal = loadTexture("textures/Brick_Mortar_vmdkahflw_2K_surface_ms/vmdkahflw_2K_Normal.jpg");
@@ -655,8 +656,10 @@ void ofApp::loadScene6() {
 
 
 	Model* sphere1 = new Model("Models/Geometry/sphere.obj");
-	sphere1->setPosition(-237, 227, 222);
-	sphere1->setScale(0.52f);
+	int x = 498;
+	int y = 415;
+	int z = -663;
+	sphere1->setPosition(-x, y, z);
 	sphere1->changeShaders("shaders/normal_420_vs.glsl", "shaders/normal_420_fs.glsl");
 	sphere1->setLightsController(m_lightsController);
 	sphere1->getMaterial()->setAllDiffuseTextures(ground);
@@ -665,8 +668,7 @@ void ofApp::loadScene6() {
 	addObjectToScene(sphere1);
 
 	Model* sphere2 = new Model("Models/Geometry/sphere.obj");
-	sphere2->setPosition(237, 227, 222);
-	sphere2->setScale(0.52f);
+	sphere2->setPosition(x, y, z);
 	sphere2->changeShaders("shaders/phong_420_vs.glsl", "shaders/phong_420_fs.glsl");
 	sphere2->setLightsController(m_lightsController);
 	sphere2->getMaterial()->setAllDiffuseTextures(ground);
@@ -674,8 +676,7 @@ void ofApp::loadScene6() {
 	addObjectToScene(sphere2);
 
 	Model* sphere3 = new Model("Models/Geometry/sphere.obj");
-	sphere3->setPosition(-237, -227, 222);
-	sphere3->setScale(0.52f);
+	sphere3->setPosition(-x, -y, z);
 	sphere3->changeShaders("shaders/normal_420_vs.glsl", "shaders/normal_420_fs.glsl");
 	sphere3->setLightsController(m_lightsController);
 	sphere3->getMaterial()->setAllDiffuseTextures(brick);
@@ -684,8 +685,7 @@ void ofApp::loadScene6() {
 	addObjectToScene(sphere3);
 
 	Model* sphere4 = new Model("Models/Geometry/sphere.obj");
-	sphere4->setPosition(237, -227, 222);
-	sphere4->setScale(0.52f);
+	sphere4->setPosition(x, -y, z);
 	sphere4->changeShaders("shaders/phong_420_vs.glsl", "shaders/phong_420_fs.glsl");
 	sphere4->setLightsController(m_lightsController);
 	sphere4->getMaterial()->setAllDiffuseTextures(brick);
@@ -712,8 +712,8 @@ void ofApp::loadScene8() {
 void ofApp::loadScene9() {
 	m_showGrid = false;
 	Light* light = createLight(LightMode::Point);
-	light->setIntensity(3.24f);
-	light->setPosition(401.0f, 328.0f, 149.0f);
+	light->setIntensity(4.23f);
+	light->setPosition(174.0f, 141.0f, 622.0f);
 
 	Texture* white = loadTexture("white.jpg");
 

@@ -131,7 +131,7 @@ void BezierSurface::draw(const Window& window, const Camera& camera) {
 	m_mesh.clearVertices();
 	ofDefaultVertexType vertex;
 	for (size_t i = 0; i < m_evaluatedPoints.size(); i++)
-	{
+	{ 
 		vertex.x = m_evaluatedPoints[i].x;
 		vertex.y = m_evaluatedPoints[i].y;
 		vertex.z = m_evaluatedPoints[i].z;
