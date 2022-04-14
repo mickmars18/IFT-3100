@@ -16,12 +16,19 @@ class BezierSurface : public Object {
 public:
 	BezierSurface();
 	std::vector<ControlPoint*> setup(int pointsPerLine, int nbSubdivision);
+	int getNbSubdivision() const {
+		return m_subdivision;
+	}
 	std::string getClassName() override;
 	void update() override;
 	void draw(const Window& window, const Camera& camera) override;
 	void addControlPoint(ControlPoint* point);
 	void evaluate();
 	glm::vec3 evaluate(float u, float v);
+
+	ofMesh& getMesh() {
+		return m_mesh;
+	}
 
 	void setNbSubdivision(int subdivision);
 private:

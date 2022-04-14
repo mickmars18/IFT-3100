@@ -38,6 +38,15 @@ std::vector<ControlPoint*> BezierSurface::setup(int pointsPerLine, int nbSubdivi
 		offset += nbSubdivision + 1;
 	}
 
+	ofDefaultTexCoordType textCoor;
+	for (int i = 0; i < nbSubdivision + 1; i++) {
+		for (int j = 0; j < nbSubdivision + 1; j++) {
+			textCoor.x = (float)i / (float)nbSubdivision;
+			textCoor.y = (float)j / (float)nbSubdivision;
+			m_mesh.addTexCoord(textCoor);
+		}
+	}
+
 
 	for (int i = 0; i < pointsPerLine; i++) {
 		for (int j = 0; j < pointsPerLine; j++) {
@@ -137,7 +146,6 @@ void BezierSurface::draw(const Window& window, const Camera& camera) {
 		vertex.z = m_evaluatedPoints[i].z;
 		m_mesh.addVertex(vertex);
 	}
-
 	ofEnableDepthTest();
 	m_shader.begin();
 	m_shader.setUniformMatrix4f("modelview", camera.getViewMatrix() * getModel());
